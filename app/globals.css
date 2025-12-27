@@ -5,7 +5,7 @@
 
 /* Updated theme to match Vestite app aesthetic - warm cream/beige tones */
 :root {
-  --background: oklch(0.965 0.01 85);
+  --background: #ffffff;
   --foreground: oklch(0.2 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.2 0 0);
@@ -120,6 +120,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }

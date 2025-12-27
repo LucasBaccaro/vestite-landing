@@ -18,12 +18,12 @@ export function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % appScreens.length)
-    }, 1500)
+    }, 3000)
     return () => clearInterval(interval)
   }, [])
 
   return (
-    <section className="relative overflow-hidden px-4 pt-4 pb-16 md:pt-6 md:pb-24">
+    <section className="relative overflow-hidden px-4 pt-4 pb-16 md:pt-6 md:pb-24 bg-white">
       <div className="mx-auto max-w-6xl">
         {/* Header */}
         <header className="flex items-center justify-between mb-12 md:mb-16">
@@ -36,8 +36,9 @@ export function HeroSection() {
 
         {/* Hero Content */}
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <Badge variant="outline" className="mb-6 gap-1.5 px-4 py-2">
-            <span className="h-2 w-2 rounded-full bg-accent" />
+
+          <Badge variant="secondary" className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm mb-4">
+            <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
             Disponible pronto para iOS y Android
           </Badge>
 
@@ -56,17 +57,17 @@ export function HeroSection() {
             <WaitlistForm
               className="w-full max-w-md"
               variant="hero"
-              inputClassName="h-12 bg-background border-input text-foreground placeholder:text-muted-foreground/50 focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary shadow-sm"
-              buttonClassName="h-12 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 shadow-md focus-visible:ring-1 focus-visible:ring-primary"
+              inputClassName="h-12 bg-background border-accent text-foreground placeholder:text-muted-foreground/50 focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary shadow-sm"
+              buttonClassName="h-12 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 shadow-md focus-visible:ring-1 focus-visible:ring-primary"
             />
           </div>
           <p className="mt-4 text-xs text-muted-foreground">
-            Únete a +2000 personas esperando el lanzamiento
+            Unite +1000 personas esperando el lanzamiento
           </p>
         </div>
 
         <div className="md:hidden flex flex-col items-center">
-          <div className="relative w-64 rounded-[2.5rem] border-8 border-primary/10 bg-card overflow-hidden">
+          <div className="relative w-64 rounded-[2.5rem] border-8 border-black bg-card overflow-hidden">
             <Image
               src={appScreens[activeIndex].src || "/placeholder.svg"}
               alt={appScreens[activeIndex].alt}
@@ -92,7 +93,7 @@ export function HeroSection() {
         {/* Desktop: same as before with shadows */}
         <div className="hidden md:flex relative items-center justify-center gap-4 md:gap-8">
           <div className="relative -rotate-6 transform transition-transform hover:rotate-0 hover:scale-105 duration-500">
-            <div className="relative w-48 md:w-64 lg:w-72 rounded-[2.5rem] border-8 border-primary/10 bg-card shadow-2xl overflow-hidden">
+            <div className="relative w-48 md:w-64 lg:w-72 rounded-[2.5rem] border-8 border-black bg-card shadow-2xl overflow-hidden">
               <Image
                 src="/images/app-chat.png"
                 alt="Vestite Asistente IA"
@@ -105,7 +106,7 @@ export function HeroSection() {
           </div>
 
           <div className="relative z-10 transform transition-transform hover:scale-105 duration-500">
-            <div className="relative w-56 md:w-72 lg:w-80 rounded-[2.5rem] border-8 border-primary/10 bg-card shadow-2xl overflow-hidden">
+            <div className="relative w-56 md:w-72 lg:w-80 rounded-[2.5rem] border-8 border-black bg-card shadow-2xl overflow-hidden">
               <Image
                 src="/images/app-home.png"
                 alt="Vestite Home Screen"
@@ -118,7 +119,7 @@ export function HeroSection() {
           </div>
 
           <div className="relative rotate-6 transform transition-transform hover:rotate-0 hover:scale-105 duration-500">
-            <div className="relative w-48 md:w-64 lg:w-72 rounded-[2.5rem] border-8 border-primary/10 bg-card shadow-2xl overflow-hidden">
+            <div className="relative w-48 md:w-64 lg:w-72 rounded-[2.5rem] border-8 border-black bg-card shadow-2xl overflow-hidden">
               <Image
                 src="/images/app-studio.png"
                 alt="Vestite AI Studio"

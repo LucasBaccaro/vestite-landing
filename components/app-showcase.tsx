@@ -32,7 +32,7 @@ export function AppShowcase() {
 
           {/* Right Phone */}
           <div className="flex justify-center">
-            <div className="relative w-64 md:w-72 rounded-[2.5rem] border-8 border-primary/10 bg-card shadow-2xl overflow-hidden">
+            <div className="relative w-64 md:w-72 rounded-[2.5rem] border-8 border-black bg-card shadow-2xl overflow-hidden">
               <Image
                 src="/images/simulator-20screenshot-20-20iphone-2016e-20-202025-12-15-20at-2014.png"
                 alt="Vestite AI Assistant"

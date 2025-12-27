@@ -27,7 +27,7 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section className="px-4 py-16 md:py-24 bg-card">
+    <section className="px-4 py-16 md:py-24 bg-[#FDFBF7]">
       <div className="mx-auto max-w-6xl">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Potenciado por Inteligencia Artificial</h2>
@@ -40,10 +40,10 @@ export function FeaturesSection() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group p-6 rounded-2xl bg-background border border-border/50 transition-all hover:border-accent/50 hover:shadow-lg"
+              className="group p-6 rounded-2xl bg-background border border-accent/50 shadow-lg transition-all"
             >
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-secondary group-hover:bg-accent/10 transition-colors">
-                <feature.icon className="h-6 w-6 text-foreground group-hover:text-accent transition-colors" />
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 transition-colors">
+                <feature.icon className="h-6 w-6 text-accent transition-colors" />
               </div>
               <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
